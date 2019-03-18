@@ -15,13 +15,6 @@ namespace ConsoleApp1
             command = command.ToUpper();
             Console.Clear();
 
-            Console.WriteLine(command);
-            Console.WriteLine();
-            Console.WriteLine("Input two numbers:");
-            Int32.TryParse(Console.ReadLine(), out valueOne);
-            Int32.TryParse(Console.ReadLine(), out valueTwo);
-            Console.WriteLine();
-
             if(command == "ADD" || command == "AD" || command == "PLUS")
             {
                 Console.WriteLine("ADD");
@@ -48,10 +41,18 @@ namespace ConsoleApp1
                 Console.WriteLine($"The difference of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            //if (command == "MULTIPLY" || command == "TIMES")
-            //{
-            //    Multiply(valueOne, valueTwo);
-            //}
+            if (command == "MULTIPLY" || command == "TIMES")
+            {
+                Console.WriteLine("MULTIPLY");
+                Console.WriteLine();
+                Console.WriteLine("Input two numbers:");
+                Int32.TryParse(Console.ReadLine(), out valueOne);
+                Int32.TryParse(Console.ReadLine(), out valueTwo);
+                Console.WriteLine();
+
+                int answer = Multiply(valueOne, valueTwo);
+                Console.WriteLine($"The product of {valueOne} and {valueTwo} is {answer}.");
+            }
 
             //if (command == "DIVIDE" || command == "DIVIDE BY")
             //{
@@ -72,6 +73,11 @@ namespace ConsoleApp1
         public static int Subtract(int valueOne, int valueTwo)
         {
             return valueOne - valueTwo;
+        }
+
+        public static int Multiply(int valueOne, int valueTwo)
+        {
+            return valueOne * valueTwo;
         }
 
 

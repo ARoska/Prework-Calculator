@@ -54,15 +54,26 @@ namespace ConsoleApp1
                 Console.WriteLine($"The product of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            //if (command == "DIVIDE" || command == "DIVIDE BY")
-            //{
-            //    Divide(valueOne, valueTwo);
-            //}
+            if (command == "DIVIDE" || command == "DIVIDE BY")
+            {
+                Console.WriteLine("DIVIDE");
+                Console.WriteLine();
+                Console.WriteLine("Input two numbers:");
+                Int32.TryParse(Console.ReadLine(), out valueOne);
+                Int32.TryParse(Console.ReadLine(), out valueTwo);
+                Console.WriteLine();
+
+                int answer = Divide(valueOne, valueTwo);
+                Console.WriteLine($"The quotent of {valueTwo} and {valueOne} is {answer}.");
+            }
 
             Console.WriteLine();
-            Console.WriteLine("Press enter to close");
-            Console.ReadLine();
+            Console.WriteLine("Press enter to close.");
+        }
 
+        private static void Main()
+        {
+            throw new NotImplementedException();
         }
 
         public static int Add(int valueOne, int valueTwo)
@@ -80,6 +91,9 @@ namespace ConsoleApp1
             return valueOne * valueTwo;
         }
 
-
+        public static int Divide(int valueOne, int valueTwo)
+        {
+            return valueTwo / valueOne;
+        }
     }
 }

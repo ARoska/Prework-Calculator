@@ -71,11 +71,6 @@ namespace ConsoleApp1
             Console.WriteLine("Press enter to close.");
         }
 
-        private static void Main()
-        {
-            throw new NotImplementedException();
-        }
-
         public static int Add(int valueOne, int valueTwo)
         {
             return valueOne + valueTwo;

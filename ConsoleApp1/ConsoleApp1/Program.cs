@@ -24,14 +24,29 @@ namespace ConsoleApp1
 
             if(command == "ADD" || command == "AD" || command == "PLUS")
             {
+                Console.WriteLine("ADD");
+                Console.WriteLine();
+                Console.WriteLine("Input two numbers:");
+                Int32.TryParse(Console.ReadLine(), out valueOne);
+                Int32.TryParse(Console.ReadLine(), out valueTwo);
+                Console.WriteLine();
+
                 int answer = Add(valueOne, valueTwo);
                 Console.WriteLine($"The sum of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            //if (command == "SUBTRACT" || command == "SUB" || command == "MINUS")
-            //{
-            //    Subtract(valueOne, valueTwo);
-            //}
+            if (command == "SUBTRACT" || command == "SUB" || command == "MINUS")
+            {
+                Console.WriteLine("SUBTRACT");
+                Console.WriteLine();
+                Console.WriteLine("Input two numbers:");
+                Int32.TryParse(Console.ReadLine(), out valueOne);
+                Int32.TryParse(Console.ReadLine(), out valueTwo);
+                Console.WriteLine();
+
+                int answer = Subtract(valueOne, valueTwo);
+                Console.WriteLine($"The difference of {valueOne} and {valueTwo} is {answer}.");
+            }
 
             //if (command == "MULTIPLY" || command == "TIMES")
             //{
@@ -51,11 +66,13 @@ namespace ConsoleApp1
 
         public static int Add(int valueOne, int valueTwo)
         {
-            int result = valueOne + valueTwo;
-            return result;
+            return valueOne + valueTwo;
         }
 
-
+        public static int Subtract(int valueOne, int valueTwo)
+        {
+            return valueOne - valueTwo;
+        }
 
 
     }

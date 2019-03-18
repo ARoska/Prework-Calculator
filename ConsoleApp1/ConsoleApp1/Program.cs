@@ -9,7 +9,6 @@ namespace ConsoleApp1
             int valueOne;
             int valueTwo;
             string command;
-            //string upperCommand;
 
             Console.WriteLine("Which function would you like to use? (Choices are: Add, Subtract, Multiply, Divide)");
             command = Console.ReadLine();
@@ -21,32 +20,43 @@ namespace ConsoleApp1
             Console.WriteLine("Input two numbers:");
             Int32.TryParse(Console.ReadLine(), out valueOne);
             Int32.TryParse(Console.ReadLine(), out valueTwo);
+            Console.WriteLine();
 
             if(command == "ADD" || command == "AD" || command == "PLUS")
             {
-                Add(valueOne, valueTwo);
+                int answer = Add(valueOne, valueTwo);
+                Console.WriteLine($"The sum of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            if (command == "SUBTRACT" || command == "SUB" || command == "MINUS")
-            {
-                Subtract(valueOne, valueTwo);
-            }
+            //if (command == "SUBTRACT" || command == "SUB" || command == "MINUS")
+            //{
+            //    Subtract(valueOne, valueTwo);
+            //}
 
-            if (command == "MULTIPLY" || command == "TIMES")
-            {
-                Multiply(valueOne, valueTwo);
-            }
+            //if (command == "MULTIPLY" || command == "TIMES")
+            //{
+            //    Multiply(valueOne, valueTwo);
+            //}
 
-            if (command == "DIVIDE" || command == "DIVIDE BY")
-            {
-                Divide(valueOne, valueTwo);
-            }
+            //if (command == "DIVIDE" || command == "DIVIDE BY")
+            //{
+            //    Divide(valueOne, valueTwo);
+            //}
+
+            Console.WriteLine();
+            Console.WriteLine("Press enter to close");
+            Console.ReadLine();
 
         }
 
         public static int Add(int valueOne, int valueTwo)
         {
-
+            int result = valueOne + valueTwo;
+            return result;
         }
+
+
+
+
     }
 }

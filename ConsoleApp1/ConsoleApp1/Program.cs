@@ -17,7 +17,7 @@ namespace ConsoleApp1
             Console.Clear();
 
             //Runs the command the user chose
-            if(command == "ADD" || command == "AD" || command == "PLUS")
+            if(command == "ADD" || command == "AD" || command == "PLUS" || command == "+")
             {
                 Console.WriteLine("ADD");
                 Console.WriteLine();
@@ -30,7 +30,7 @@ namespace ConsoleApp1
                 Console.WriteLine($"The sum of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            if (command == "SUBTRACT" || command == "SUB" || command == "MINUS")
+            else if (command == "SUBTRACT" || command == "SUB" || command == "MINUS" || command == "-")
             {
                 Console.WriteLine("SUBTRACT");
                 Console.WriteLine();
@@ -43,7 +43,7 @@ namespace ConsoleApp1
                 Console.WriteLine($"The difference of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            if (command == "MULTIPLY" || command == "TIMES")
+            else if (command == "MULTIPLY" || command == "TIMES" || command == "*")
             {
                 Console.WriteLine("MULTIPLY");
                 Console.WriteLine();
@@ -56,7 +56,7 @@ namespace ConsoleApp1
                 Console.WriteLine($"The product of {valueOne} and {valueTwo} is {answer}.");
             }
 
-            if (command == "DIVIDE" || command == "DIVIDE BY")
+            else if (command == "DIVIDE" || command == "DIVIDE BY" || command == "/")
             {
                 Console.WriteLine("DIVIDE");
                 Console.WriteLine();

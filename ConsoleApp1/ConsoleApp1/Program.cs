@@ -63,12 +63,13 @@ namespace ConsoleApp1
                 Int32.TryParse(Console.ReadLine(), out valueTwo);
                 Console.WriteLine();
 
-                int answer = Divide(valueOne, valueTwo);
+                double answer = Divide(valueOne, valueTwo);
                 Console.WriteLine($"The quotent of {valueTwo} and {valueOne} is {answer}.");
             }
 
             Console.WriteLine();
             Console.WriteLine("Press enter to close.");
+            Console.ReadLine();
         }
 
         public static int Add(int valueOne, int valueTwo)
@@ -86,7 +87,7 @@ namespace ConsoleApp1
             return valueOne * valueTwo;
         }
 
-        public static int Divide(int valueOne, int valueTwo)
+        public static double Divide(double valueOne, double valueTwo)
         {
             return valueTwo / valueOne;
         }
